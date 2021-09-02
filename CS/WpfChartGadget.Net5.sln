@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChartGadget", "WpfChartGadget.csproj", "{1FA03041-5A53-49CE-A131-E8669736900E}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChartGadget", "WpfChartGadget.Net5.csproj", "{1FA03041-5A53-49CE-A131-E8669736900E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
