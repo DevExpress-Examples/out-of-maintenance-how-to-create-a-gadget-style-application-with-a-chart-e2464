@@ -1,44 +1,43 @@
-﻿Imports System.Windows
+Imports System.Windows
 Imports DevExpress.Xpf.Charts
 
 Namespace WpfChartGadget
-	''' <summary>
-	''' Interaction logic for MainWindow.xaml
-	''' </summary>
-	Partial Public Class MainWindow
-		Inherits Window
 
-		Public Sub New()
-			InitializeComponent()
-		End Sub
+    ''' <summary>
+    ''' Interaction logic for MainWindow.xaml
+    ''' </summary>
+    Public Partial Class MainWindow
+        Inherits Window
 
-		Private Sub Window_Loaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
-			FillChartWithTestData()
-			PositionChartAboveTheTaskbar()
-		End Sub
+        Public Sub New()
+            Me.InitializeComponent()
+        End Sub
 
-		Private Sub Window_MouseLeftButtonDown(ByVal sender As Object, ByVal e As System.Windows.Input.MouseButtonEventArgs)
-			Me.DragMove()
-		End Sub
+        Private Sub Window_Loaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
+            FillChartWithTestData()
+            PositionChartAboveTheTaskbar()
+        End Sub
 
-		Private Sub Window_MouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Input.MouseButtonEventArgs)
-			Me.Close()
-		End Sub
+        Private Sub Window_MouseLeftButtonDown(ByVal sender As Object, ByVal e As Input.MouseButtonEventArgs)
+            DragMove()
+        End Sub
 
-		Private Sub FillChartWithTestData()
-			chartControl1.Diagram.Series(0).ArgumentScaleType = ScaleType.Numerical
-			chartControl1.Diagram.Series(0).ValueScaleType = ScaleType.Numerical
+        Private Sub Window_MouseDoubleClick(ByVal sender As Object, ByVal e As Input.MouseButtonEventArgs)
+            Close()
+        End Sub
 
-			chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(1, 0.1))
-			chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(2, 0.5))
-			chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(3, 0.2))
-			chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(4, 0.3))
-		End Sub
+        Private Sub FillChartWithTestData()
+            Me.chartControl1.Diagram.Series(0).ArgumentScaleType = ScaleType.Numerical
+            Me.chartControl1.Diagram.Series(0).ValueScaleType = ScaleType.Numerical
+            Me.chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(1, 0.1))
+            Me.chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(2, 0.5))
+            Me.chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(3, 0.2))
+            Me.chartControl1.Diagram.Series(0).Points.Add(New SeriesPoint(4, 0.3))
+        End Sub
 
-		Private Sub PositionChartAboveTheTaskbar()
-			Me.Left = SystemParameters.WorkArea.Width - Me.Width
-			Me.Top = SystemParameters.WorkArea.Height - Me.Height
-		End Sub
-
-	End Class
+        Private Sub PositionChartAboveTheTaskbar()
+            Left = SystemParameters.WorkArea.Width - Width
+            Top = SystemParameters.WorkArea.Height - Height
+        End Sub
+    End Class
 End Namespace
